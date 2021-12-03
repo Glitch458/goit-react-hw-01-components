@@ -1,19 +1,19 @@
-export default function Friends(props) {
+export default function Friends({ friends }) {
   return (
-    <ul classList="friend-list">
-      {props.friends.map(friend => {
+    <ul className="friend-list">
+      {friends.map(friend => {
         return (
-          <li classList="item">
-            <span classList="status">
+          <li className="item" key={friend.id}>
+            <span className="status">
               {friend.isOnline ? 'Online' : 'Offline'}
             </span>
             <img
-              classList="avatar"
+              className="avatar"
               src={friend.avatar}
               alt="User avatar"
               width="48"
             />
-            <p classList="name">{friend.name}</p>
+            <p className="name">{friend.name}</p>
           </li>
         );
       })}
