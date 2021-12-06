@@ -1,10 +1,12 @@
-export default function Statistic({ title, stats }) {
+import styles from './Statistic.module.css';
+
+function Statistic({ title, stats }) {
   return (
-    <section className="statistics">
-      <h2 className="title">{title}</h2>
-      <ul className="stat-list">
+    <section className={styles.statistic}>
+      <h2 className={styles.title}>{title}</h2>
+      <ul className={styles.statsList}>
         {stats.map(stat => (
-          <li className="item" key={stat.id}>
+          <li className={styles.item} key={stat.id}>
             <span className="label">{stat.label}</span>
             <span className="percentage">{stat.percentage}%</span>
           </li>
@@ -13,3 +15,5 @@ export default function Statistic({ title, stats }) {
     </section>
   );
 }
+
+export default Statistic;

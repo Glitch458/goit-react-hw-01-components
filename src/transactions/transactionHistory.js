@@ -1,4 +1,6 @@
-export default function TransactionHistory(props) {
+import styles from './Transactions.module.css';
+
+function TransactionHistory(props) {
   return (
     <table className="transaction-history">
       <thead>
@@ -23,3 +25,5 @@ export default function TransactionHistory(props) {
     </table>
   );
 }
+
+export default TransactionHistory;

@@ -1,12 +1,14 @@
-export default function Friends({ friends }) {
+import styles from './Friends.module.css';
+
+function Friends({ friends }) {
   return (
-    <ul className="friend-list">
+    <ul className={styles.friendList}>
       {friends.map(friend => {
         return (
-          <li className="item" key={friend.id}>
-            <span className="status">
-              {friend.isOnline ? 'Online' : 'Offline'}
-            </span>
+          <li
+            className={friend.isOnline ? styles.itemOn : styles.itemOff}
+            key={friend.id}
+          >
             <img
               className="avatar"
               src={friend.avatar}
@@ -20,3 +22,5 @@ export default function Friends({ friends }) {
     </ul>
   );
 }
+
+export default Friends;

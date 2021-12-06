@@ -1,0 +1,13 @@
+.friendList {
+  margin: 20px;
+}
+
+.itemOn::marker {
+  font-size: 3em;
+  color: greenyellow;
+}
+
+.itemOff::marker {
+  font-size: 3em;
+  color: red;
+}
