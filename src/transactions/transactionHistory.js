@@ -1,5 +1,3 @@
-import styles from './Transactions.module.css';
-
 function TransactionHistory(props) {
   return (
     <table className="transaction-history">

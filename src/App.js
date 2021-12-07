@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import './App.css';
 import Profile from './profile/Profile';
 import Statistics from './statistic/Statistic';
@@ -24,5 +25,15 @@ function App() {
     </>
   );
 }
+
+App.propTypes = {
+  username: PropTypes.string,
+  tag: PropTypes.string,
+  location: PropTypes.string,
+  stats: PropTypes.string,
+  title: PropTypes.string,
+  friends: PropTypes.string,
+  items: PropTypes.string,
+};
 
 export default App;

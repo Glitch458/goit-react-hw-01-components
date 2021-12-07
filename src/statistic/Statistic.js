@@ -3,7 +3,8 @@ import styles from './Statistic.module.css';
 function Statistic({ title, stats }) {
   return (
     <section className={styles.statistic}>
-      <h2 className={styles.title}>{title}</h2>
+      {title && <h2 className={styles.title}>{title}</h2>}
+
       <ul className={styles.statsList}>
         {stats.map(stat => (
           <li className={styles.item} key={stat.id}>
